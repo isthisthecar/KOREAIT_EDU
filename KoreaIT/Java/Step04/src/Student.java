@@ -1,17 +1,57 @@
 
 public class Student {
 	//학교
-	String studentNo;
+	private String studentNo;
 	//학년
-	String major;
+	private String major;
 	//이름
-	String name;
+	private String name;
 	//성적
-	double score;
+	private double score;
+
+//	public void setName(String name) {
+//		this.name = name;
+//	}
+//	public String getNmae() {
+//		return name;
+//	}
+//	
 	
-	// 전체 필드 초기화하는 생성자
+	// 전체 필드 초기화하는 생성자 : 알트 + 쉬프트 + S -> R 
 	
-	Student(String studentNo, String major, String name, double score){
+	public String getStudentNo() {
+		return studentNo;
+	}
+
+	public void setStudentNo(String studentNo) {
+		this.studentNo = studentNo;
+	}
+
+	public String getMajor() {
+		return major;
+	}
+
+	public void setMajor(String major) {
+		this.major = major;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getScore() {
+		return score;
+	}
+
+	public void setScore(double score) {
+		this.score = score;
+	}
+
+	public Student(String studentNo, String major, String name, double score){
 		this.studentNo = studentNo;
 		this.major = major;
 		this.name = name;
@@ -27,7 +67,7 @@ public class Student {
 
 
 
-	Student(String studentNo){
+	public Student(String studentNo){
 		// this 키워드는 자기 자신 객체를 나타내는 키워드
 //		this.studentNo = studentNo;
 		//다른 생성자 호출
@@ -49,13 +89,13 @@ public class Student {
 		return score1;
 	}
 	
-	void printsutdentinfo(){
+	public void printsutdentinfo(){
 		System.out.println("학번 = "+studentNo);
 		System.out.println("이름 = "+name);
 		System.out.println("학과 = "+major);
 		System.out.println("평점 = "+score+", "+"등급 = "+getGrade());
 	}
-	void printsutdentinfo1() {
+	public void printsutdentinfo1() {
 		System.out.println(studentNo + " " + name + " " + major + " " + score + "" + getGrade());
 	}
 	//평점 등급을 구하는 메서드

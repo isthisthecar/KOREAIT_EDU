@@ -11,6 +11,8 @@ public class AnimalMain {
 		Animal animal = new Animal();
 		System.out.println("----------------");
 		Dog dog = new Dog();
+		
+		
 		System.out.println("----------------");
 		Person person = new Person();
 		System.out.println("----------------");
