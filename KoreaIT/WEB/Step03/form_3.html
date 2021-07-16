@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>label, checkbox</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <label for ='id'>아이디</label><input type="text" id="id"><br>
+    <label for ='passwd'>암호</label><input type="password" id="passwd"><br>
+    <input type="checkbox" value="1" id="a1"> <label for="a1">항목1</label><br>
+    <input type="checkbox" value="2" id="a2"> <label for="a2">항목2</label><br>
+    <input type="checkbox" value="3" id="a3"> <label for="a3">항목3</label><br>
+    <input type="checkbox" value="4" id="a4"> <label for="a4">항목4</label><br>
+    <hr>
+    <input type="radio" name="agree" value="yes" id="r1" ><label for="r1">예</label>
+    <input type="radio" name="agree" value="no" id="r2" checked><label for="r2">아니오</label>
+    <!-- name 속성을 같은것으로 해야 같은그룹으로 인식함. -->
+    <!-- checked 미리 체크시켜둠 -->
+    <!-- 여러개 선택이 되느냐. 여러개 중 한개만 선택이 되느냐. -->
+    <hr>
+    <select name="tel">
+        <option value="0">010</option>
+        <option value="1">011</option>
+        <option value="6" selected>016</option>
+        <option value="9">019</option>
+    </select><br>
+    <select name="major" multiple size="10">
+        <optgroup label = "공과대학">
+            <option value="1">건축공학과</option>
+            <option value="2">기계공학과</option>
+            <option value="3">전기공학과</option>
+            <option value="4">화학공학과</option>
+            <option value="5">환경공학과</option>
+        </optgroup>
+        <optgroup label = "인문대학">
+            <option value="6">국어국문학과</option>
+            <option value="7">독어독문학과</option>
+            <option value="8">영어영문학과</option>
+            <option value="9">불어불문학과</option>
+            <option value="10">일어일문학과</option>
+        </optgroup>
+    </select>
+</body>
+</html>
