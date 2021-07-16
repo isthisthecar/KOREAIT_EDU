@@ -63,7 +63,29 @@ block 태그 : 내용에 대한 영역을 잡는 태그  --> 문단(영역)으�
 colspan : 가로방향으로 몇칸짜리
 rowspan : 세로방향으로 몇칸짜리
 
-thead
-tbody
-tfoot
+thead : 테이블 머리글 영역
+tbody : 테이블 본문 영역
+tfoot : 테이블 꼬리말 영역
 
+--- form 태그 ---
+<form> : 사용자에게 입력 받을 태그를 감싸는 태그
+         폼태그 내부에 있는 태그들에 데이터 입력하면 
+         입력한 데이터를 전송할 페이지 및 전송 형태를 결정해주는 태그
+
+<input> : 사용자에게 입력을 받는 태그, type 속성을 이용해서 다양한 형태로 입력을 받음
+    text, password, checkbox, radio, button, submit, number, date, file, email
+    
+<label> : input 태그를 id 속성값으로 연결해서 focus 효과를 주는 태그
+          연결하기 위해 for 속성을 사용
+
+<select> : 사용자에게 드롭다운 형식으로 항목을 선택하게 하는 태그
+    <select name="major" multiple size="10">
+        <optgroup label = "공과대학">
+            <option value="1">건축공학과</option>
+            <option value="2">기계공학과</option>
+            <option value="3">전기공학과</option>
+
+<textarea> : 사용자에게 여러줄의 텍스트를 입력받을 때 사용 (댓글)
+
+<button> : 버튼 생성하는 태그
+           submit, reset, button
