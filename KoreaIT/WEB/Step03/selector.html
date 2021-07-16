@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        /* 전체 선택자 '*' 모든 태그 */
+        *{
+            margin: 0; /* 컨텐츠 바깥 여백*/
+            padding: 0; /* 컨텐츠 안쪽 여백*/
+        }
+        /* 태그 선택자 */
+        h1{
+            color : cadetblue;
+        }
+        li{
+            color: #123359;
+            font-weight: bold;
+        }
+        /* 아이디 선택자 : #을 붙여야함. #name -> name의 아이디를 가진 것에 적용하겠다. */
+        #name{
+            font-size: 20px;
+        }
+        #id{
+            color: red;
+        }
+        /* 클래스 선택자 */
+        .underline{
+            text-decoration: underline red;
+        }
+        .bold{
+            font-weight: bold;
+        }
+        /* 그룹선택자 */
+        h1,p,#id{
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>제목 태그</h1>
+    <p class="bold underline">오늘 코로나 확진자 수는 현재 631명 입니다.</p>
+    <ol>
+        <li>경기도 225명</li>
+        <li class="underline">서울 180명</li>
+        <li>부산 53명</li>
+        <li>인천 44명</li>
+    </ol>
+    <input type="text" id="id" value="아이디값"><br>
+    <input type="text" id="name" value="이름값"><br>
+</body>
+</html>
