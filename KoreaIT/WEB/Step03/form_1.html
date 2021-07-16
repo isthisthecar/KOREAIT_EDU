@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <form action="" method="post">
+        <input type="text" name="txt" placeholder="텍스트를 입력하세요" required autofocus> <br>
+        <!-- autofocus 초기 커서위치 선택 -->
+        <input type="text" name="txt2" value="셋팅된 값"  readonly><br>
+        <!-- value : 초기에 셋팅한 전송할 값, 수정불가값-->
+        <input type="password" name="txt3" required minlength="5" maxlength="10"> 
+        <!-- password 는 입력한 값을 마스킹해줌 ex) ********** -->
+        <button type="submit">전송</button>
+
+    </form>
+    
+</body>
+</html>
