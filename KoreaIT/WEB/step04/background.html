@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        div{
+            width: 600px;
+            height: 400px;
+            padding: 20px;
+            border: 20px dashed yellow;
+            margin-top: 40px;
+        }
+        .box1{
+            background-color: cornflowerblue;
+            background-clip: content-box;
+        }
+        .box2{
+            width: 1000px;
+            height: 500px;
+            background-image: url(/resource/images/city.jpg);
+            background-repeat: no-repeat;
+            /* left right top bottom center */
+            /* background-position: center; */
+            /* cover : 가로세로 길이 중 큰것 기준으로 채워짐 -> 한쪽이 보통 짤리게 됨
+               contain : 가로세로 비율 중 작은 거 기준으로 채움 -> 전체를 채우지는 못하지만 잘리지 않음
+            */
+
+            background-size: contain;
+            background-origin: border-box;
+        }
+        .box3{
+            /* background: border-box blueviolet; */
+            background: center / contain no-repeat url(/resource/images/cloud.png);
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    
+</body>
+</html>
