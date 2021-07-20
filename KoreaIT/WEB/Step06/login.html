@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>로그인화면</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 300px;
+            margin: 50px auto;
+        }
+        input,
+        button {
+            width: 100%;
+            height: 40px;
+            box-sizing: border-box;
+            margin-bottom: 5px;
+        }
+        input{
+            padding-left: 40px;
+            background-position: 5px center;
+            background-size: 30px;
+            background-repeat: no-repeat;
+            border-radius: 5px;
+        }
+        #id{
+            background-image: url(/resource/images/id.png);
+        }
+        #pass{
+            background-image: url(/resource/images/password.png);
+        }
+        button{
+            background-color: green;
+            color: white;
+            font-weight: bold;
+            border:2px outset rgb(3, 105, 3);
+        }
+        button:active{
+            border-style: inset;
+        }
+        /* div {
+            border: 2px outset black;
+            width: 200px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            margin: 3px auto;
+        }
+
+        .login {
+            margin: 3px auto;
+        }
+
+        input {
+            border: 0px;
+        }
+
+        input:active {
+            border: 0px;
+        }
+
+        a {
+            text-align: center;
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        button {
+            width: 200px;
+            margin: 0 auto;
+            background-color: yellowgreen;
+            box-sizing: border-box;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <input type="text" name="id" id="id" placeholder="아이디를 입력하세요">
+            <input type="password" name="pass" id="pass" placeholder="암호를 입력하세요">
+            <button type="submit">로그인</button>
+            <button type="button">회원가입</button>
+        </form>
+    </div>
+
+    <!-- <div>
+        <img src="/resource/images/icon/login_user.png" alt="아이디입력">
+        <input type="text" placeholder="아이디를 입력하세요" autofocus>
+    </div>
+
+    <div>
+        <img src="/resource/images/icon/key_login.png" alt="암호입력">
+        <input type="text" placeholder="암호를 입력하세요" autofocus>
+    </div>
+    <div>
+        <button class="login">
+            <a href="">로그인</a>
+        </button>
+    </div>
+    <div>
+        <button class="login">
+            <a href="">회원가입</a>
+        </button>
+    </div> -->
+</body>
+
+</html>
