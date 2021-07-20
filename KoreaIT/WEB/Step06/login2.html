@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            margin: 0 auto;
+            width: 50px;
+            height: 40px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        section {
+            border: 1px solid gray;
+            width: 500px;
+            height: 430px;
+            margin: 0 auto;
+            padding: 50px;
+        }
+        article{
+            margin-top: 10px;
+        }
+        p{
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        input{
+            width: 400px;
+            height: 30px;
+            font-size: 15px;
+            margin-top: 5px;
+        }
+        ul{
+            padding-left: 30px;
+            margin: 10px 0px;
+            color: grey;
+            font-weight: bold;
+        }
+        li{
+            font-size: 10px;
+            margin: 2px;
+            padding : 0px 5px;
+            border-radius: 10px;
+        }
+        button {
+            width: 100%;
+            height: 35px;
+            box-sizing: border-box;
+            margin-bottom: 5px;
+        }
+
+        .cert{
+            width: 150px;
+            height: 30px;
+            box-sizing: border-box;
+            border-radius: 15px;
+            background-color: white;
+        }
+        .next{
+            width: 500px;
+            height: 30px;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+    </style> -->
+    <!-- <style>
+        * {
+            padding: 0;
+            margin: 0;
+            border: none;
+        }
+        header {
+            text-align: center;
+        }
+        section{
+            width: 600px;
+            height: 500px;
+            border: 1px solid grey;
+            margin: 0 auto;
+            padding: 50px;
+        }
+        article {
+            margin-top: 10px;
+        }
+        p {
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        input {
+            width: 500px;
+            height: 30px;
+            font-size: 15px;
+            margin-top: 5px;
+        }
+        form {
+            border-bottom: 1px solid grey;
+        }
+        span {
+            width: 100px;
+            float: right;
+            margin-top: 8px;
+            text-align: right;
+        }
+        ::placeholder {
+            font-weight: bold;
+        }
+        ul {
+            font-size: 10px;
+            padding: 0 30px;    
+        }
+        select {
+            width: 90px;
+        }
+        #in {
+            width: 150px;
+            height: 30px;
+            background-color: white;
+            border: 1px solid rgb(218, 216, 216);
+            border-radius: 20px;
+        }
+        #next {
+            width: 600px;
+            height: 40px;
+        } 
+    </style>-->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            text-align: center;
+            margin-top: 40px;
+        }
+        .container{
+            width: 700px;
+            padding: 40px;
+            margin: 0 auto;
+            border: 1px solid #e9e9e9;
+        }
+        .container > form > ul{
+            list-style-type: none;
+        }
+        .container > form > ul > li{
+            margin-top: 10px;
+        }
+        .container > form > ul > ul{
+            margin-top: 10px;
+            padding-left: 40px;
+            list-style-type: disc;
+            color: grey;
+        }
+        label{
+            font-weight: bold;
+        }
+        .border_bottom{
+            border-bottom: 2px solid #d4d4d4;
+        }
+        input{
+            border : none;
+            outline: none; 
+            /* 선택하면 나오는 선 */
+            height: 50px;
+            width: 80%;
+            font-size: 20px;
+        }
+        .sub_txt{
+            display: inline-block;
+            text-align: right;
+            width: 20%;
+            box-sizing: border-box;
+            font-size: 20px;
+            font-weight: bold;
+            color: gray;
+            padding-right: 10px;
+        }
+        select{
+            width: 100px;
+            font-size: 20px;
+            height: 50px;
+            box-sizing: border-box;
+            border: none;
+            border-right: 1px solid #d4d4d4;
+        }
+        #tel{
+            padding-left: 10px;
+        }
+        .btn_send_no{
+            width: 200px;
+            height: 50px;
+            background-color: white;
+            border: 1px solid #d4d4d4;
+            border-radius: 23px;
+        }
+        .btn_send_no:hover{
+            background-color: #d4d4d4;
+        }
+        .btn_send_no:active{
+            background-color: white;
+        }
+        .btn_next{
+            width: 100%;
+            height: 50px;
+            background-color: #d4d4d4;
+            border-radius: 10px;
+            border: none;
+        }
+        .btn_next:hover{
+            background-color: rgb(223, 223, 45);
+        }
+        .btn_next:active{
+            background-color: rgb(221, 221, 42);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <header>
+        <h1>kakao</h1>
+    </header>
+    <section>
+        <h3>카카오계정 정보를 입력해 주세요</h3>
+        <h4>카카오계정 이메일</h4>
+        <form action="">
+            <input type="text" name="id" id="id" placeholder="아이디 입력">
+        </form>
+        <hr>
+
+        <ul>
+            <li>입력한 카카오메일로 카카오계정에 로그인 할 수 있습니다.</li>
+            <li>한번 만든 카카오메일은 변경할 수 없으니, 오타가 없도록 신중히 확인해주세요.</li>
+            <li>생성한 카카오메일로 카카오계정과 관련한 알림을 받아볼 수 있습니다.</li>
+        </ul>
+        <h4>비밀번호</h4>
+        <form action="">
+            <input type="password" name="pass" id="pass" placeholder="비밀번호(8~32자리)"><br>
+            <hr>
+            <input type="password" name="repass" id="repass" placeholder="비밀번호 재입력">
+        </form>
+        <hr>
+        <h4>닉네임</h4>
+        <form action="">
+            <input type="text" name="nick" id="nick" placeholder="닉네임을 입력하세요">
+        </form>
+        <hr>
+        <h4>전화번호</h4>
+        <table>
+            <tr>
+                <td>
+                    <select id="tell">
+                    <option value="1">+82</option>
+                    <option value="2">+83</option>
+                    <option value="3">+84</option>
+                    <option value="4">+85</option>
+                </select>
+            </td>
+            <td>
+                <form action=""> <input type="number" name="phone" id="phone" placeholder="전화번호"></form>
+            </td>
+            </tr>
+        </table>
+        <div>
+            <button class="cert" type="submit">인증번호</button>
+        </div>
+        <div>
+            <button class="next" type="submit">다음</button>
+        </div>
+    </section> --> -->
+    <!-- <header>
+        <h1>kakao</h1>
+    </header>
+    <section>
+        <h2>카카오계정 정보를 입력해 주세요</h2>
+        <p>카카오계정 이메일</p>
+        <article>
+            <form action="">
+                <input type="text" name="id" id="id" placeholder="아이디입력" >
+                <span>@kakao.com</span>
+            </form>
+        </article>
+        <article>
+            <ul>
+                <li>입력한 카카오메일로 카카오계정에 로그인할 수 있습니다.</li>
+                <li>한번 만든 카카오메일은 변경 할 수 없으니, 오타가 없도록 신중히 확인해주세요.</li>
+                <li>생성한 카카오메일로 카카오계정과 관련한 알림을 받아볼 수 있습니다.</li>
+            </ul>
+        </article>
+        <p>비밀번호</p>
+        <article>
+            <form action="">
+                <input type="password" name="passwd1" id="passwd1" placeholder="비밀번호(8~32자리)">
+            </form>
+            <form action="">
+                <input type="password" name="passwd2" id="passwd2" placeholder="비밀번호 재입력">
+            </form>
+        </article>
+        <p>닉네임</p>
+        <article>
+            <form action="">
+                <input type="text" name="name" id="name" placeholder="닉네임을 입력하세요">
+                <span>0/20</span>
+            </form>
+        </article>
+        <p>전화번호</p>
+        <article>
+            <form action="">
+                <select name="num" id="num">
+                    <option value="1">+82</option>
+                    <option value="2">+83</option>
+                    <option value="3">+84</option>
+                    <option value="4">+85</option>
+                </select>
+                <input type="text" name="phone" id="phone" placeholder="전화번호">
+            </form>
+        </article>
+        <article>
+            <button type="button" name="in" id="in">인증번호 전송</button>
+        </article>
+        <article>
+            <button type="submit" name="next" id="next">다음</button>
+        </article>
+    </section> -->
+    <h1>kakao</h1>
+    <div class="container">
+        <h2>카카오 계정 정보를 입력해주세요.</h2>
+        <form action="">
+            <ul>
+                <li><label for="id">카카오계정 이메일</label></li>
+                <li class="border_bottom"><input type="text" name="id" id="id" placeholder="아이디 입력"><span class="sub_txt">@kakao.com</span>
+                </li>
+                <ul>
+                    <li>입력한 카카오메일로 카카오계정에 로그인 할 수 있습니다.</li>
+                    <li>한번 만든 카카오메일은 변경할 수 없으니, 오타가 없도록 신중히 확인해주세요.</li>
+                    <li>생성한 카카오메일로 카카오계정과 관련한 알림을 받아볼 수 있습니다.</li>
+                </ul>
+                <li><label for="pass">비밀번호</label></li>
+                <li class="border_bottom">
+                   <input type="password" name="pass" id="id" placeholder="비밀번호(8~32자리)" maxlength="32" minlength="8">
+                </li>
+                <li class="border_bottom">
+                    <input type="password" id="pass_chk" placeholder="비밀번호 재입력" maxlength="32" minlength="8">
+                </li>
+                <li><label for="nick">닉네임</label></li>
+                <li class="border_bottom">
+                    <input type="text" id="nick" placeholder="닉네임을 입력하세요" maxlength="20" minlength="0">
+                    <span class="sub_txt">0/20</span>
+                </li>
+                <li><label for="tel">전화번호</label></li>
+                <li class="border_bottom">
+                    <select name="gcode" id="gcode">
+                        <option value="1">+82</option>
+                        <option value="2">+83</option>
+                        <option value="3">+84</option>
+                        <option value="4">+85</option>
+                    </select><input type="text" name="tel" id="tel" placeholder="전화번호 입력하세요(-제외)"  class="left_border">
+                </li>
+                <li>
+                    <button type="button" class="btn_send_no">인증번호 전송</button>
+                </li>
+                <li>
+                    <button class="btn_next">다음</button>
+                </li>
+
+            </ul>
+        </form>
+    </div>
+</body>
+
+</html>
