@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            transition-property: all;
+            /* css가 바뀌는게 있다면 어떤것만 할거냐.1 */
+            transition-duration: 500ms;
+
+        }
+        .box1:hover{
+            background-color: coral;
+            border: 2px dashed red;
+        }
+        .box2{ width: 300px;
+            height: 300px;
+            border: 1px solid blue;
+            transition-property: all;
+            /* css가 바뀌는게 있다면 어떤것만 할거냐.1 */
+            transition-duration: 500ms;
+        }
+        .box2:hover{
+            border-radius: 150px;
+            background-color: red;
+        }
+        button{
+            position: absolute;
+            transition-property: all;
+            transition-duration: 2s;
+        }
+        button:hover{
+            margin-top: 500px;
+            margin-left: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>    
+    <button>회원탈퇴</button>
+</body>
+</html>
