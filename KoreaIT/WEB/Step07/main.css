@@ -1,0 +1,7 @@
+/* 문자코드 먼저 설정 */
+@charset 'utf-8';
+
+.container{
+    background-color: red;
+    height: 500px;
+}
