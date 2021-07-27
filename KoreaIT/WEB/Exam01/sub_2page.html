@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='sub_2page.css'>
+</head>
+<body>
+    <div class="flex_container">
+        <header>
+            <div class="ad_img">
+                <img src="/resource/images/pizza_main.jpg" alt="피자 광고 이미지">
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li><a href="#">제품소개</a></li>
+                <li><a href="sub_2page.html">제품문의</a></li>
+                <li><a href="#">판매지점</a></li>
+                <li><a href="franchise.html">가맹점신청</a></li>
+            </ul>
+        </nav>
+        <section>
+            <article>
+                <h2>제품문의 페이지</h2>
+                <div class="article_container">
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="title">제목</label>
+                            </td>
+                            <td>
+                                <input type="text" name="title" id="title" placeholder="제목을 입력해주세요" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="writer">작성자</label>
+                            </td>
+                            <td>
+                                <input type="text" name="writer" id="writer" placeholder="작성자를 입력해주세요" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                내용
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><textarea name="" id="" cols="50" rows="20"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>첨부파일</td>
+                            <td><input type="file"></td>
+            
+                        </tr>
+                        <tr>
+                            <td colspan="3"><hr></td>
+                        </tr>
+                        <tr>
+                            <td><button class="btn_write">글쓰기</button></td>
+                            <td><button type="button" class="btn_cancel">취소</button></td>
+                        </tr>
+                    </table>
+        </section>
+    </div>
+    
+</body>
+</html>

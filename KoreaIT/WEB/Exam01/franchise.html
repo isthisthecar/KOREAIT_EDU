@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>메인페이지</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='franchise.css'>
+</head>
+<body>
+    <div class="flex_container">
+        <header>
+            <div class="ad_img">
+                <img src="/resource/images/pizza_main.jpg" alt="피자 광고 이미지">
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li><a href="#">제품소개</a></li>
+                <li><a href="sub_2page.html">제품문의</a></li>
+                <li><a href="#">판매지점</a></li>
+                <li><a href="franchise.html">가맹점신청</a></li>
+            </ul>
+        </nav>
+        <section>
+            <article>
+                <h2>가맹점 신청 페이지</h2>
+                <div class="article_container">
+                    <div>
+                        <table>
+                            <tr>
+                                <td><label for="name">신청자</label></td>
+                            </tr>
+                            <tr>
+                                <td><label for="address">주소</label></td>
+                            </tr>
+                            <tr>
+                                <td><label for="tel2">연락처</label></td>
+                            </tr>
+                            <tr>
+                                <td><label for="email">이메일</label></td>
+                            </tr>
+                            <tr>
+                                <td><label>메일링 서비스 동의</label></td>
+                            </tr>
+                            <tr>
+                                <td><label>개인정보 수집 동의</label></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <input type="text" id="name" required><br>
+                        <input type="text" id="address" required> <button type="button" class="btn_search"><a href="#">주소검색</a></button><br>
+                        <div class="tell">
+                            <select id="tel1">
+                                <option value="0">010</option>
+                                <option value="1">011</option>
+                                <option value="6">016</option>
+                                <option value="9">019</option>
+                            </select>
+                            <input type="text" id="tel2" required> <input type="text" id="tel3" required><br> 
+                        </div>
+                        <input type="text" id="email" required>@
+                        <select id="email1">
+                            <option value="1">gmail.com</option>
+                            <option value="2">naver.com</option>
+                            <option value="3">hanmail.net</option>
+                            <option value="4">직접입력</option>
+                        </select><br>
+                        <input type="checkbox" id="chk"><label for="chk">동의</label><br>
+                        <input type="radio" name="agree" id="yes" required><label for="yes">동의</label>
+                        <input type="radio" name="agree" id="no" required><label for="yes">비동의</label><br>
+                    </div>
+                </div>
+            </article>
+            <article class="button1">
+                <ul>
+                    <li><button type="submit">신청하기</button></li>
+                    <li><button type="reset">초기화</button></li>
+                    <li><button type="button">취소</button></li>
+                </ul>
+            </article>
+        </section>
+    </div>
+    
+</body>
+</html>
