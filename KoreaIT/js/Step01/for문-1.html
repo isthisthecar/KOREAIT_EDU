@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        .bold{
+            font-weight: bold;
+        }
+        p{
+            display: inline;
+        }
+    </style>
+    <script>
+        for(i=1;i<11;i++){
+            var tag = i % 3 == 0 ? `<p class="bold">${i}</p>` : i ;
+            document.write(tag,"<Br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
