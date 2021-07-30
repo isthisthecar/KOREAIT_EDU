@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .list_item {
+            width: 360px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .list_item>img {
+            width: 60px;
+            border-radius: 30px;
+        }
+
+        .list_item>p {
+            width: 240px;
+        }
+
+        .list_item>p>span {
+            font-size: 0.9em;
+        }
+
+        .list_item>button {
+            width: 60px;
+            font-size: 30px;
+            font-weight: bold;
+            background: none;
+            border: none;
+        }
+    </style>
+
+    <script>
+        for (i = 0; i < 5; i++) {
+            document.write(`<div class="list_item">`);
+            document.write(`<img src="/WEB/resource/images/pizza_main.jpg">`);
+            document.write(`<p>Lina Tales님의 링크를 공유했습니다<br><span>12시간전</span></p>`);
+            document.write(`<button><b>***</b></button>`)
+            document.write(`</div>`);
+        }
+
+        var tag = "";
+        for (i = 0; i < 5; i++) {
+            tag += `<div class="list_item">
+            <img src="/WEB/resource/images/pizza_main.jpg">
+                <p>Lina Tales님의 링크를 공유했습니다.<br>
+                    <span>12시간 전</span></p>
+                    <button><b>***</b></button>
+                </div>`
+        }
+        document.write(tag);
+    </script>
+</head>
+
+<body>
+    <!-- <div class="list_item">
+        <img src="/WEB/resource/images/pizza_main.jpg">
+        <p>Lina Tales님의 링크를 공유했습니다.<br>
+            <span>12시간 전</span></p>
+        <button><b>***</b></button>
+    </div> -->
+</body>
+
+</html>
