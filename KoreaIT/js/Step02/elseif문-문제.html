@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- 
+        숫자 1개 입력 받아서 
+        데이터의 범위는 0보다 큰 값을 입력
+        입력받은 데이터가 
+        0 ~ 30이면 미세먼지 수치가 좋음 > skyblue 색상
+        31 ~ 80 보통 > yellowgreen 색상
+        81 ~ 150 나쁨 > orange 색상
+        151 이상 매우나쁨 > red 색상
+     -->
+    <style>
+        .good{
+            color: skyblue;
+        }
+        .normal{
+            color: skyblue;
+        }
+        .bad{
+            color: skyblue;
+        }
+        .verybad{
+            color: skyblue;
+        }
+    </style>
+    <script>
+        var num1 = Number(prompt("미세먼지 수치 : ","0"));
+        if(num1<31){
+            document.write(`<span style="color:skyblue">좋음</span>`);
+        }else if(num1<81){
+            document.write(`<span class="normal">보통</span>`);
+        }else if(num1<151){
+            document.write(`<span class="bad">나쁨</span>`);
+        }else{
+            document.write(`<span class="verybad">매우나쁨</span>`);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

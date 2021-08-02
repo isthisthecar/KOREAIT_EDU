@@ -21,7 +21,7 @@ u  : 밑줄
 
 태그의 종류는 크게 두가지로 나눔
 inline 태그 : 내용 일부분을 디자인 내용에 해당하는 태그   --> 글자로 취급 --> 줄바꿈이 일어나지 않음
-                --> b, i, em, u, mark, img, audio, video, iframe
+                --> b,  em, i,, u, mark, img, audio, video, iframe
 block 태그 : 내용에 대한 영역을 잡는 태그  --> 문단(영역)으로 취급 --> 자동으로 줄바꿈이 일어남
                 -->h1 ~ h6, ul, ol, p, pre, blockquout
 
