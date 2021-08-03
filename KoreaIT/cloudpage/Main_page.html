@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>로그인 전 메인페이지</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .flex_container {
+            display: flex;
+            flex-direction: column;
+            width: 1700px;
+            margin: 0 auto;
+        }
+        /* header 부분 */
+        header {
+            display: flex;
+            margin-top: 5px;
+        }
+        .logo {
+            width: 300px;
+            height: 100px;
+        }
+        .logo img {
+            width: 300px;
+            height: 100px;
+        }
+        .menu_bar1 {
+            width: 400px;
+            position: relative;
+            left: 1000px;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: start;
+        }
+        nav ul li {
+            padding-left: 33px;
+            color: #ffb755;
+            margin-top: 40px;
+        }
+        nav a:link,
+        nav a:visited {
+            font-size: 20px;
+            text-decoration: none;
+            color: #ffb755;
+            vertical-align: middle;
+        }
+        #hrline1 {
+            width: 1700px;
+            margin: 0 auto;
+            border: 1px solid #ffb755;
+        }
+
+        /* section */
+        section{
+            margin-bottom: 50px;
+        }
+        article{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .main_img{
+            width: 1400px;
+            height: 500px;
+            margin: 0 auto;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        #main_slogan{
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: 100px;
+            width: 1400px;
+            color: #ffb755;
+
+        }
+        .explain_img{
+            width: 1400px;
+            height: 500px;
+            margin: 0 auto;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+        .sub_slogan1, .sub_slogan2, .sub_slogan3{
+            font-size: 30px;
+            margin: 0 auto;
+            text-align: center;
+
+        }
+        /* footer */
+        footer div{
+            width: 350px;
+            margin-bottom: 10px;
+        }
+        footer ul{
+            list-style-type: none;
+            margin-bottom: 50px;
+        }
+
+        .main_img, .explain_img {
+            position: relative;
+        }
+
+        .main_img button, .explain_img button {
+            background: none;
+            border: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 25px;
+            width: 50px;
+        }
+
+        .main_img button img, .explain_img button img {
+            width: 50px;
+        }
+        .left_arrow {
+            top: calc(50% - 25px);
+        }
+
+        .right_arrow {
+            top: calc(50% - 25px);
+            right: 0px;
+        }
+    </style>
+
+</head><body>
+    <div class="flex_container">
+        <header>
+            <div class="logo">
+                <a href="#"><img src="./cloudresource/mainpageimg/Orange_logo.png" alt="오렌지 로고"></a>
+            </div>
+            <div class="menu_bar1">
+                <nav>
+                    <ul>
+                        <li><a href="#">회원가입</a></li>
+                        <li>|</li>
+                        <li><a href="#">로그인</a></li>
+                        <li>|</li>
+                        <li><a href="#">제품소개</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <hr id="hrline1">
+        <section>
+            <article>
+                <div class="main_img">
+                    <button class="left_arrow"><img src="./cloudresource/mainpageimg/left_arrow_icon.png" alt="이전"></button>
+                    <button class="right_arrow"><img src="./cloudresource/mainpageimg/right_arrow_icon.png" alt="다음"></button>
+                    <img src="./cloudresource/mainpageimg/main1.png" alt="main_img" width="500px" ,="" height="500px"><img src="./cloudresource/mainpageimg/main2.png" alt="main_img" width="900px" ,="" height="500px">
+                </div>
+                <div id="main_slogan">
+                    파일 관리는 ORANGE와 함께
+                </div>
+            </article>
+            <article>
+                <div class="explain_img">
+                    <button class="left_arrow"><img src="./cloudresource/mainpageimg/left_arrow_icon.png" alt="이전"></button>
+                    <button class="right_arrow"><img src="./cloudresource/mainpageimg/right_arrow_icon.png" alt="다음"></button>
+                    <img src="./cloudresource/mainpageimg/memory1.png" alt="explain_img1" width="900px" height="500px"><img src="./cloudresource/mainpageimg/memory1.png" alt="explain_img2" width="500px" height="500px">
+                </div>
+                <div class="sub_slogan1">
+                    빛나는 순간을 놓치지 마세요.
+                </div>
+            </article>
+            <article>
+                <div class="explain_img">
+                    <button class="left_arrow"><img src="./cloudresource/mainpageimg/left_arrow_icon.png" alt="이전"></button>
+                    <button class="right_arrow"><img src="./cloudresource/mainpageimg/right_arrow_icon.png" alt="다음"></button>
+                    <img src="./cloudresource/mainpageimg/share3.png" alt="explain_img2" width="700px" height="500px"><img src="./cloudresource/mainpageimg/share2.png" alt="explain_img2" width="700px" height="500px">
+                </div>
+                <div class="sub_slogan2">
+                    원활한 소통과 공유로 역량을 향상시키세요.
+                </div>
+            </article>
+            <article>
+                <div class="explain_img">
+                    <button class="left_arrow"><img src="./cloudresource/mainpageimg/left_arrow_icon.png" alt="이전"></button>
+                    <button class="right_arrow"><img src="./cloudresource/mainpageimg/right_arrow_icon.png" alt="다음"></button>
+                    <img src="./cloudresource/mainpageimg/security.png" alt="explain_img3" width="800px" height="500px"><img src="./cloudresource/mainpageimg/storage1.png" alt="explain_img3" width="600px" height="500px">
+                </div>
+                <div class="sub_slogan3">
+                    철저한 보안과 넓은 저장공간으로 걱정없이 사용하세요.
+                </div>
+            </article>
+        </section>
+
+        <hr id="hrline1">
+
+        <footer>
+            <div>
+                <a href="#"><img src="./cloudresource/mainpageimg/Orange_logo.png" alt="오렌지 로고"></a>
+            </div>
+            <div>
+                사진, 문서 자료 등을 한곳에 안전하게 보관하고 작업할 수 있는 클라우드 입니다.
+            </div>
+            <div>
+                <ul>
+                    <li>사업자등록번호 : 200 - 10 - 20010</li>
+                    <li>상호 : 오렌지</li>
+                    <li>대표이사 : 1조</li>
+                    <li>대표전화 : 02 - 0000 - 0000</li>
+                    <li>이메일 : Orange2021@gmail.com</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
