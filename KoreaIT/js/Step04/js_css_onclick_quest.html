@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        #box {
+            width: 300px;
+            height: 300px;
+            background-image: url(/KoreaIT/WEB/resource/images/icon/nonecheckbox.png);
+            background-size: 100%;
+        }
+    </style>
+    <script>
+        // 박스를 클릭할때마다, 배경 이미지를 non_check.png / check.png로 변경
+        window.onload = function(){
+            var box = document.getElementById("box")
+            var flag = false;
+            box.onclick = function(){
+                flag = !flag;
+                console.log(flag);
+                if(flag){
+                    box.style.backgroundImage = "url(/KoreaIT/WEB/resource/images/icon/checkbox.png)";
+                }else
+                    box.style.backgroundImage = "url(/KoreaIT/WEB/resource/images/icon/nonecheckbox.png)";
+            }
+        }
+
+        
+    </script>
+</head>
+
+<body>
+    <div id="box"></div>
+</body>
+
+</html>
