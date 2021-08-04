@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        function login(){
+            //name 속성 이용해서 접근하는 방법 -1
+            var id = document.getElementsByName("id");
+            //name 속성 이용해서 접근하는 방법 -2 
+            var pass = document.frm.pass;
+            // var pass = document.getElementsByName("pass")
+            alert("아이디 : " + id[0].value + "비밀번호 : " + pass[0].value);
+        }
+    </script>
+
+</head>
+<body>
+    <!-- 로그인 폼 -->
+    <!-- name 태그는 중복명 가능 그래서 배열로 관리함. -->
+    <form name="frm">
+        <input type="text" name="id"><br>
+        <input type="password" name="pass"><br>
+
+        <button onclick="login()">로그인하기</button>
+    </form>
+</body>
+</html>
