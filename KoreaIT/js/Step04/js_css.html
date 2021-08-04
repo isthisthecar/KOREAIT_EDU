@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        window.onload = function(){
+            var pop = document.getElementById("pop");
+            pop.style.color = "red";
+
+            //pop에 css 추가, - 는 쓸수가 없어서 하나의 단어로 쓰임. text-align -> textAlign
+            pop.style.textDecoration = "underline";
+            //ul 태그에 블릿 문자를 제거
+            //li에 배경색을 노랑색으로 설정
+            var ul = document.getElementsByTagName("ul")[0];
+            ul.style.listStyleType = "none";
+
+            var li = document.getElementsByTagName("li");
+            for(i=0;i<li.length;i++)
+                li[i].style.backgroundColor = "yellow";
+        }
+    </script>
+</head>
+<body>
+    <div id="pop">영역 태그</div>    
+    <ul id="pop2">
+        <li>A - list</li>
+        <li>B - list</li>
+        <li>C - list</li>
+        <li>D - list</li>
+    </ul>
+</body>
+</html>
