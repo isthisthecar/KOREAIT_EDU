@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        window.onload = function () {
+            var sel = document.querySelector("#sel");
+            var area = document.querySelector("#area");;
+            sel.onchange = function () {
+                console.log(this.value);
+                if (this.value === "4") {
+                    area.innerHTML = `<input type = 'text' id='dhost'>`;
+                }else
+                    area.innerHTML = ""
+            }
+        }
+    </script>
+</head>
+
+<body>
+        <input type="text" id="txt">@
+        <span id="area"></span>
+        <select id="sel">
+            <option value="0">선택</option>
+            <option value="1">gmail.com</option>
+            <option value="2">naver.com</option>
+            <option value="3">nate.com</option>
+            <option value="4">직접입력</option>
+        </select>
+
+</body>
+
+</html>
