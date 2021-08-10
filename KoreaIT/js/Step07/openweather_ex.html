@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+
+        //ajax 호출하는 함수 작성
+        function makeRequest() {
+            httpRequest = new XMLHttpRequest();
+
+            if (!httpRequest) {
+                alert("XMLHTTP 객체 생성 실패");
+                return false;
+            }
+            httpRequest.onreadystatechange = weatherResult;
+            httpRequest.open('GET', `http://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=828313b2b110ae0bf30b89149a36725a`);
+            httpRequest.send();
+        }
+        //결과처리하는 함수 - weatherResult
+        function weatherResult() {
+            //받은 내용을 콘솔에 출력
+            if(httpRequest.readyState === XMLHttpRequest.DONE){//응답이 완료, 이상없음
+                if(httpRequest.status === 200){//code 200이면 정상적으로 수행되고 데이터를 받았음
+                    console.log(httpRequest.responseText);
+                    var data = JSON.parse(httpRequest.responseText);
+                    var tag = `<p>도시명 : ${data.name}</p>`;
+                    tag += `<p>현재날씨 : ${data.main}</p>`;
+                    tag += `<p>최저온도 : ${data.main.temp_min-273.15}</p>`;
+                    tag += `<p>현재온도 : ${data.main.temp-273.15}</p>`;
+                    tag += `<p>최고온도 : ${data.main.temp_max-273.15}</p>`;
+                    tag += `<p>바람세기 : ${data.wind.speed}</p>`;
+                    var result = document.querySelector("#result");
+                    result.innerHTML = tag;
+                                        
+                }
+            }
+        }
+
+
+        window.onload = function () {
+            var btn = document.querySelector("#request")
+
+            btn.onclick = function () {
+                makeRequest();
+
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <button id="request">날씨 정보 요청</button>
+    <div id="result"></div>
+</body>
+
+</html>
