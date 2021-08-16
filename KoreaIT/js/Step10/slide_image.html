@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='/js/resource/lib/jquery-3.6.0.min.js'></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .carousel_container {
+            width: 1200px;
+            height: 400px;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .carousel{
+            width: 7200px;
+            height: 400px;
+            font-size: 0px;
+        }
+        .carousel img {
+            width: 1200px;
+            height: 400px;
+        }
+        .carousel_container > button{
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.6);
+            height: 100%;
+            top: 0px;
+            border: none;
+        }
+        .left_arrow{
+            left: 0px;
+        }
+        .right_arrow{
+            right: 0px;
+        }
+        .carousel_container > button:hover{
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .carousel_container > button:active{
+            background: none;
+        }
+
+    </style>
+    <script src="/js/resource/lib/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            var slideImageWidth = $(".carousel > img:first-child").width();
+            $(".left_arrow").click(function(){
+                $(".carousel > img:first-child").animate({"margin-left":"-"+slideImageWidth+"px"},500,function(){
+                    $(this).appendTo($(".carousel")).css("margin-left","0px");
+                });
+            });
+            $(".right_arrow").click(function(){
+                $(".carousel > img:last-child").css("margin-left","-"+slideImageWidth+"px")
+                .prependTo($(".carousel")).animate({
+                    "margin-left":"0px"
+                },500)
+                }
+            )
+        })
+    </script>
+</head>
+
+<body>
+    <div class="carousel_container">
+        <div class="carousel">
+            <img src="/js/resource/images/carousel/main2.png" alt="">
+            <img src="/js/resource/images/carousel/memory1.png" alt="">
+            <img src="/js/resource/images/carousel/security.png" alt="">
+            <img src="/js/resource/images/carousel/share2.png" alt="">
+            <img src="/js/resource/images/carousel/share3.png" alt="">
+            <img src="/js/resource/images/carousel/storage1.png" alt="">
+        </div>
+            <button class="left_arrow"><img src="/js/resource/images/larrow.png" alt=""></button>
+            <button class="right_arrow"><img src="/js/resource/images/rarrow.png" alt=""></button>
+    </div>
+</body>
+
+</html>
