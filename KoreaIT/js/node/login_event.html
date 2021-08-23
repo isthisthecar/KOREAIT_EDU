@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        window.onload = function(){
+
+
+            var frm = document.querySelector("#frm");
+            var id = document.querySelector("#id");
+            var pass = document.querySelector("#pass");
+            
+            frm.onsubmit = function(e){
+                if(id.value.length == 0){
+                    alert("아이디를 입력하세요");
+                    e.preventDefault();
+                    id.focus();
+                }else if(pass.value.length==0){
+                    alert("암호를 입력하세요")
+                    e.preventDefault();
+                    pass.focus();
+                }
+            }
+
+            document.querySelector("#register").onclick = function(){
+                location.href="/registerView"
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="/login.do" id="frm">
+        <input type="text" id="id" name="id" placeholder="아이디를 입력하세요"><br>
+        <input type="password" id="pass" name="pass" placeholder="암호를 입력하세요"><br>
+        <button>로그인</button>
+        <button type="button" id="register">회원가입</button>
+
+    </form>
+</body>
+</html>
