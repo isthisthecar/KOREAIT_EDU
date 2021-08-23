@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src='/js/resource/lib/jquery-3.6.0.min.js'></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .page_container {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-top: 20px;
+            width: 1000px;
+            position: relative;
+            background-color: rgba(196, 196, 196, 0.5);
+        }
+
+        .nav_bar {
+            display: flex;
+            flex-direction: row;
+            left: 50px;
+        }
+
+        .logo {
+            font-size: 32px;
+        }
+
+        .menu_bar {
+            display: flex;
+            flex-direction: row;
+            right: 0;
+            position: absolute;
+            bottom: 0px;
+        }
+
+        .menu_bar li {
+            width: 150px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        a,
+        a:hover,
+        a:active {
+            color: black;
+            text-decoration: none;
+        }
+
+        .sub_menu_container {
+            display: flex;
+            flex-direction: row;
+            right: 0;
+            position: absolute;
+            z-index: 999;
+            background-color: rgba(196, 196, 196, 0.5);
+        }
+
+        .sub_menu {
+            width: 150px;
+            text-align: center;
+        }
+
+        .sub_menu li {
+            font-size: 16px;
+            height: 30px;
+            margin-top: 8px;
+        }
+
+        .section {
+            width: 1000px;
+        }
+
+        .main_img {
+            width: 1000px;
+            margin-top: 20px;
+            position: relative;
+
+        }
+
+        .main_img img {
+            width: 1000px;
+            height: 250px;
+        }
+
+        .slogan {
+            width: 1000px;
+            text-align: center;
+            font-size: 24px;
+            color: white;
+            position: absolute;
+            top: 108px;
+        }
+
+        th,
+        td {
+            border-bottom: 1px solid #e4e4e4;
+            text-align: center;
+        }
+
+        #name {
+            width: 150px;
+        }
+
+        #title {
+            width: 600px;
+        }
+
+        #date {
+            width: 250px;
+        }
+
+        footer {
+            width: 1000px;
+            height: 250px;
+        }
+
+        .logo2 {
+            font-size: 20px;
+        }
+
+        footer ul li {
+            font-size: 12px;
+        }
+
+        #question {
+            width: 1000px;
+        }
+
+        #answer {
+            width: 900px;
+        }
+        .select {
+            background-color: #b9b9b9;
+            color: white;
+        }
+    </style>
+    <script>
+        $(function () {
+            // $("td").click(function () {
+            //     $(this).addClass("select").next().next($("tr")).slideToggle(300);
+            //     $("td").not($(this)).removeClass("select").next().next($("tr")).slideUp(300);
+            // })
+
+
+            //메뉴 드랍다운
+            $(".menu_bar > li").mouseenter(function(){
+                $(".sub_menu_container").children(".sub_menu").stop().slideDown(500);
+            })
+
+            $(".sub_menu").mouseleave(function(){
+                $(".sub_menu_container").children(".sub_menu").stop().slideUp(500);
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="page_container">
+        <header>
+            <nav class="nav_bar">
+                <div class="logo">땡땡문고</div>
+                <ul class="menu_bar">
+                    <li>
+                        <a href="#">회원</a>
+                    </li>
+                    <li>
+                        <a href="#">도서</a>
+                    </li>
+                    <li>
+                        <a href="#">문의</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sub_menu_container">
+                <ul class="sub_menu">
+                    <li><a href="#">회원관리</a></li>
+                    <li><a href="#">등급조정</a></li>
+                    <li><a href="#">도서</a></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="#">도서관리</a></li>
+                    <li><a href="#">출판사관리</a></li>
+                    <li><a href="#">도서발주</a></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="#">대기중인문의</a></li>
+                    <li><a href="#">답변한문의</a></li>
+                    <li><a href="#">실시간채팅</a></li>
+                </ul>
+            </div>
+            <hr>
+        </header>
+        <section>
+            <article class="main_img">
+                <div><img src="/js/resource/images/carousel/main2.png" alt="main_image"></div>
+                <div class="slogan">고객문의 페이지</div>
+            </article>
+            <article class="board">
+                <table id="accodion">
+                    <tr>
+                        <th id="name">이 름</th>
+                        <th id="title">제 목</th>
+                        <th id="date">날 짜</th>
+                    </tr>
+                    <tr>
+                        <td>박지성</td>
+                        <td>축구1</td>
+                        <td>2021-08-12</td>
+                    </tr>
+                    <tr class="contents">
+                        <td colspan="3">
+                            <div id="question">축구만화 언제 입고되나요?</div>
+                            <textarea name="answer" id="answer" cols="10" rows="2"></textarea><button>확인</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>안정환</td>
+                        <td>축구2</td>
+                        <td>2021-08-12</td>
+                    </tr>
+                    <tr class="contents">
+                        <td colspan="3">
+                            <div id="question">축구만화 언제 입고되나요?</div>
+                            <textarea name="answer" id="answer" cols="10" rows="2"></textarea><button>확인</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이영표</td>
+                        <td>축구3</td>
+                        <td>2021-08-12</td>
+                    </tr>
+                    <tr class="contents">
+                        <td colspan="3">
+                            <div id="question">축구만화 언제 입고되나요?</div>
+                            <textarea name="answer" id="answer" cols="10" rows="2"></textarea><button>확인</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>손흥민</td>
+                        <td>축구4</td>
+                        <td>2021-08-12</td>
+                    </tr>
+                    <tr class="contents">
+                        <td colspan="3">
+                            <div id="question">축구만화 언제 입고되나요?</div>
+                            <textarea name="answer" id="answer" cols="10" rows="2"></textarea><button>확인</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>설기현</td>
+                        <td>축구5</td>
+                        <td>2021-08-12</td>
+                    </tr>
+                    <tr class="contents">
+                        <td colspan="3">
+                            <div id="question">축구만화 언제 입고되나요?</div>
+                            <textarea name="answer" id="answer" cols="10" rows="2"></textarea><button>확인</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이강인</td>
+                        <td>축구6</td>
+                        <td>2021-08-12</td>
+                    </tr>
+                    <tr class="contents">
+                        <td colspan="3">
+                            <div id="question">축구만화 언제 입고되나요?</div>
+                            <textarea name="answer" id="answer" cols="10" rows="2"></textarea><button>확인</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이동국</td>
+                        <td>축구7</td>
+                        <td>2021-08-12</td>
+                    </tr>
+                    <tr class="contents">
+                        <td colspan="3">
+                            <div id="question">축구만화 언제 입고되나요?</div>
+                            <textarea name="answer" id="answer" cols="10" rows="2"></textarea><button>확인</button>
+
+                        </td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+        <footer>
+            <hr>
+            <div class="logo2">땡땡문고</div>
+            <ul>
+                <li>주소 : 서울시 마포구 XXX</li>
+                <li>전화번호 : 02-0000-0000</li>
+                <li>이메일 주소 : ddangddang02@gmail.com</li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>
