@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .div_container{
+            width: 300px;
+            margin: 50px auto;
+        }
+        .title{
+            width: 300px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        #id, #pass, #passck, #email, #name{
+            width: 300px;
+            height: 30px;
+            border: none;
+            border-bottom: 2px solid #c8c8c8;
+        }
+        label{
+            width: 100%;
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        button{
+            width: 100%;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ffff00;
+        }
+        button:hover{
+            background-color: #dfdf25;
+        }
+
+        #email{
+            width: 150px;
+        }
+        #mail{
+            width: 120px;
+            height: 30px
+        }
+
+    </style>
+</head>
+<body>
+    <div class="div_container">
+        <div class="title">회원가입</div>
+        <div>
+            <label for="id">아이디</label><br>
+            <input type="text" id="id" placeholder="아이디 입력">
+
+        </div>
+        <div>
+            <label for="pass">암호</label><br>  
+            <input type="password" id="pass" placeholder="암호 입력">
+
+        </div>
+        <div>
+            <label for="passck">암호확인</label><br>  
+            <input type="password" id="passck" placeholder="암호 확인">
+
+        </div>
+        <div>
+            <label for="name">이름</label><br>  
+            <input type="text" id="name" placeholder="이름 입력">
+
+        </div>
+        <div>
+            <label for="name">이메일</label><br>  
+            <input type="text" id="email" placeholder="이메일 주소 입력">@
+            <select id="mail">
+                <option value="0">gmail.com</option>
+                <option value="1">naver.com</option>
+                <option value="2">hanmail.net</option>
+            </select>
+        </div>
+        <div>
+            개인적인 제공 동의
+            <input type="checkbox" class="btn1"> 예
+        </div>
+        <div>
+            <button type="submit">회원가입</button>
+        </div>
+    </div>
+</body>
+</html>
