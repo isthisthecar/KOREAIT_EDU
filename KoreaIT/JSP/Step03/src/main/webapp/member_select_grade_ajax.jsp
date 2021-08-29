@@ -1,0 +1,25 @@
+<!-- 클라이언트가 보낸 등급을 가지고 조회 작업을 하여 클라이언트로 전송 -->
+
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="config.DBManager"%>
+<%@page import="java.sql.Connection"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	Connection conn = DBManager.getInstance().getConnection();
+	String grade = request.getParameter("grade");
+	String sql = "select * from member where lower(grade) = lower(?)";
+	PreparedStatement pstmt = conn.prepareStatement(sql);
+	pstmt.setString(1, grade);
+	ResultSet rs = pstmt.executeQuery();
+	String result = "";
+	while(rs.next()){
+		result += rs.getString(1) +","+rs.getString(2) + ","+rs.getString(3) +
+				","+rs.getInt(4)+","+rs.getInt(5)+","+rs.getInt(6)+","+rs.getString(7)+"\n";
+	}
+	out.write(result);
+	rs.close();
+	pstmt.close();
+%>
