@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Step01</name>
+	<name>MemberManageProject</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -30,7 +30,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1629774203530</id>
+			<id>1629793105507</id>
 			<name></name>
 			<type>30</type>
 			<matcher>
