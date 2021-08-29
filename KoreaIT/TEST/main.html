@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>레이아웃</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        .left_menu {
+            width: 60px;
+            height: 100%;
+            box-sizing: border-box;
+            position: fixed;
+            left: 0px;
+            top: 0px;
+        }
+
+        header img {
+            width: 100%;
+            height: 500px;
+            box-sizing: border-box;
+            margin-left: 60px;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        .main_menu {
+            width: 100%;
+            height: 50px;
+            box-sizing: border-box;
+            margin-left: 60px;
+
+        }
+
+        section {
+            width: 100%;
+            height: 1040px;
+            box-sizing: border-box;
+            margin-left: 60px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .main_menu {
+            border-bottom: 1px solid gray;
+            text-align: center;
+        }
+
+        .main_menu ul {
+            display: inline-block;
+        }
+
+        .main_menu li {
+            width: 220px;
+            height: 50px;
+            float: left;
+        }
+
+        .main_menu li a:link,
+        .main_menu li a:visited {
+            font-size: 24px;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            line-height: 24px;
+            padding: 13px 0px;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+        }
+
+        .left_menu {
+            background-color: #e8e8e8;
+        }
+
+        .left_menu li {
+            width: 100%;
+            height: 32px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .left_menu img {
+            width: 40px;
+        }
+
+        article {
+            padding-top: 50px;
+            text-align: center;
+        }
+
+        article label {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        article table {
+            margin: 20px auto;
+        }
+
+        article input {
+            width: 300px;
+            height: 40px;
+            font-size: 16px;
+        }
+
+        label[for=agree] {
+            height: 40px;
+            box-sizing: border-box;
+            padding: 5px;
+            float: left;
+        }
+
+        input[type=checkbox] {
+            float: left;
+            width: 40px;
+        }
+
+        select[name=tel1] {
+            width: 70px;
+            padding-left: 10px;
+        }
+
+        input[name^=tel] {
+            width: 100px;
+            text-align: center;
+        }
+
+        article select {
+            width: 120px;
+            height: 40px;
+            font-size: 16px;
+        }
+
+        article textarea {
+            width: 500px;
+            height: 200px;
+            resize: none;
+        }
+
+        article tr>td:first-child {
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        article tr>td:last-child {
+            text-align: left;
+        }
+
+        td>button {
+            width: 100px;
+            height: 50px;
+            background-color: #6161be;
+            color: white;
+            font-weight: bold;
+            border: none;
+        }
+
+        td>button:first-child {
+            float: left;
+        }
+
+        td>button:last-child {
+            float: right;
+        }
+
+        .table_footer {
+            padding-right: 0px !important;
+        }
+
+        .true {
+            color: blue;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center !important;
+        }
+
+        .false {
+            color: red;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center !important;
+        }
+
+        .inputNumber::-webkit-outer-spin-button,
+        .inputNumber::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    </style>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            $("form").submit(function (e) {
+                if ($("#name").val().length < 2) {
+                    $(".name_result").html("이름은 3글자 이상 입력하거나 숫자만 입력하지마세요");
+                    e.preventDefault();
+                }
+                if ($("#address").val().length < 10) {
+                    $(".address_result").html("주소는 10글자 이상 입력하세요 ");
+                    e.preventDefault();
+                }
+                if ($("#email").val().length < 5) {
+                    $(".email_result").html("이메일 주소는 5글자 이상 입력하세요 ");
+                    e.preventDefault();
+                }
+                if ($("#tel2").val().length < 3) {
+                    $(".tell_result").html("연락처를 입력하세요");
+                    e.preventDefault();
+                }
+                if ($("#tel3").val().length < 4) {
+                    $(".tell_result").html("연락처를 입력하세요");
+                    e.preventDefault();
+                }
+                if (!$("#agree").is(":checked")) {
+                    $(".agree_result").html("개인정보 수집 및 활용 동의를 해야 서비스 이용이 가능합니다.");
+                    e.preventDefault();
+                }
+            });
+            $("select[name=host]").change(function () {
+                if ($(this).val() == 0) {
+                    $("#host_area").html(`<input type="text" name="i_host" placeholder="직접입력">`);
+                } else {
+                    $("#host_area").html("");
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <nav class="left_menu">
+        <ul>
+            <li><a href="#"><img src="img/home.png" title="HOME 페이지로 이동" alt="HOME 페이지로 이동"></a></li>
+            <li><a href="#"><img src="img/cup.png" title="COFFEE 페이지로 이동" alt="COFFEE 페이지로 이동"></a></li>
+            <li><a href="#"><img src="img/tv.png" title="CF 페이지로 이동" alt="CF 페이지로 이동"></a></li>
+            <li><a href="#"><img src="img/picture.png" title="PRINT 페이지로 이동" alt="PRINT 페이지로 이동"></a></li>
+            <li><a href="#"><img src="img/headphone.png" title="문의하기 페이지로 이동" alt="문의하기 페이지로 이동"></a></li>
+        </ul>
+    </nav>
+    <header><img src="./img/header_img.jpg" alt="메인 이미지"></header>
+    <nav class="main_menu">
+        <ul>
+            <li><a href="#" title="HOME 페이지로 이동" alt="HOME 페이지 이동">HOME</a></li>
+            <li><a href="#" title="COFFEE 페이지로 이동" alt="COFFEE 페이지 이동">COFFEE</a></li>
+            <li><a href="#" title="CF 페이지로 이동" alt="CF 페이지 이동">CF</a></li>
+            <li><a href="#" title="PRINT 페이지로 이동" alt="PIRNT 페이지 이동">PRINT</a></li>
+            <li><a href="#" title="문의하기 페이지로 이동" alt="문의하기 페이지 이동">문의하기</a></li>
+        </ul>
+    </nav>
+    <section>
+        <article>
+            <h2>가맹점 신청 페이지</h2>
+            <form action="" method="post">
+                <table>
+                    <tr>
+                        <td><label for="name">신청자</label></td>
+                        <td><input type="text" name="name" id="name" placeholder="신청자분 이름을 입력해주세요"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="false name_result"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address">주소</label></td>
+                        <td><input type="text" name="address" id="address" placeholder="가맹점이 위치할 주소를 입력해주세요"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="false address_result"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">답변받을 이메일</label></td>
+                        <td>
+                            <input type="text" name="email" id="email" placeholder="이메일 주소">@
+                            <select name="host">
+                                <option value="1">gmail.com</option>
+                                <option value="2">naver.com</option>
+                                <option value="3">hanmail.net</option>
+                                <option value="0">직접입력</option>
+                            </select>
+                            <div id="host_area"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="false email_result"></td>
+                    </tr>
+                    <tr>
+                        <td><label>연락처</label></td>
+                        <td>
+                            <select name="tel1">
+                                <option>010</option>
+                                <option>011</option>
+                                <option>016</option>
+                                <option>017</option>
+                                <option>019</option>
+                            </select>
+                            <input type="number" maxlength="4" id="tel2" name="tel2" class="inputNumber">
+                            <input type="number" maxlength="4" id="tel3" name="tel3" class="inputNumber">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="false tell_result"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="checkbox" name="agree" id="agree"><label for="agree">개인정보 수집 및 활용동의</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="false agree_result"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="table_footer">
+                            <button>문의하기</button>
+                            <button type="reset">초기화</button>
+                        </td>
+                    </tr>
+                </table>
+
+            </form>
+        </article>
+
+
+    </section>
+
+</body>
+
+</html>
